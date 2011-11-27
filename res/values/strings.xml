@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="category_confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="hello">Hello World, AndShobber!</string>
+    <string name="app_name">AndshoBBer</string>
+    <string name="dev_app_name">DevAndshoBBer</string>
+    <string name="no_items">Currently there are no items on the shopping list</string>
+    <string name="menu_create">Add</string>
+    <string name="menu_copy">Copy</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_rename">Rename</string>
+    <string name="todo_summary">Summary</string>
+    <string name="todo_description">Delete Todo</string>
+    <string name="todo_edit_summary">Summary</string>
+    <string name="todo_edit_description">Description</string>
+    <string name="item_edit_confirm">Confirm</string>
+    <string name="item_edit_cancel">Cancel</string>
+    <string name="todo_edit_fill">Fill</string>
+    <string name="v_prompt">Choose value</string>
+    <string name="cat_prompt">Choose a category</string>
+    <string name="store_prompt">Choose a store</string>
+    <string name="database_name">Database</string>
+    <string name="view_txt">Shopping</string>
+    <color name="listcolor">#000000</color>
+    <color name="shopcolor">#0000FF</color>
+    <color name="black">#FFFFFF</color>
+    <color name="font">#FFFFFF</color>
+    <color name="needcolor">#000000</color>
+    <color name="hilightcolor">#000000</color>
+    <color name="background_light">#0106000f</color>
+    <color name="background_dark">#ff444444</color>
+    <string name="menu_sort">Edit</string>
+    <string name="menu_edit">Edit</string>
+    <string name="menu_date">Date</string>
+    <string name="menu_clear_date">Clear Date</string>
+    <string name="menu_postpone">Postpone</string>
+
+</resources>

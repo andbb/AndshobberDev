@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array
+		name="categories">
+		<item></item>
+		<item>-</item>
+	</string-array><string-array
+		name="categories2">
+		<item></item>
+		<item>Unfiled</item>
+		<item>Brød</item>
+		<item>Drikkevarer</item>
+		<item>Frost</item>
+		<item>Frugt/Grønt</item>
+		<item>Hygiejne</item>
+		<item>Kaffe/Te</item>
+		<item>Kons.sød</item>
+		<item>Konserves</item>
+		<item>Krydderi</item>
+		<item>Kød</item>
+		<item>Mejeri</item>
+		<item>Morgenmad</item>
+		<item>Ost</item>
+		<item>Pålæg</item>
+		<item>Rengøring</item>
+		<item>Sundhed</item>
+		<item>Trælast</item>
+		<item>Tørvarer</item>
+	</string-array>
+	<string-array
+		name="needs">
+		<item></item>
+		<item>have</item>
+		<item>x</item>
+		<item>later</item>
+	</string-array>
+	<string-array name="sort">
+		<item>Sort need , aisle, category, item</item>
+		<item>date, aisle, category, item</item>
+		<item>category, item</item>	
+		<item>item, category</item>	
+	</string-array>
+	<string-array name="fields">
+		<item>Aisle</item>
+		<item>date</item>
+		<item>Category</item>	
+		<item>Item</item>	
+		<item>Priority</item>	
+	</string-array>
+	<string-array name="view">
+		<item>Shobber View</item>
+        <item>Date view</item>
+        <item>Priority view</item>
+        <item>Detailed view</item>
+    </string-array>
+	<string-array name="settings">
+		<item>PlannerAll</item>
+		<item>PlannerStore</item>
+		<item>ShopperAll</item>
+		<item>ShopperStore</item>
+	</string-array>
+</resources>

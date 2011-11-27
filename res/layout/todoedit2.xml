@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/listcolor">
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/listcolor">
+
+        <ImageView
+                android:layout_width="fill_parent"
+                android:id="@+id/iconEdit"
+                android:src="@drawable/icon"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="6dp"
+                android:layout_weight="1">
+        </ImageView>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_edit"
+                android:layout_weight="4"
+                android:hint="Item"></EditText>
+
+        <Spinner
+                android:id="@+id/category"
+                android:layout_weight="3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/categories"></Spinner>
+
+    </LinearLayout>
+
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/note_edit"
+            android:hint="Description"
+            android:gravity="top"></EditText>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/listcolor">
+
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/quantity"
+                android:hint="Quantity"
+                android:gravity="top"></EditText>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/units"
+                android:hint="Units"
+                android:gravity="top"></EditText>
+    </LinearLayout>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/listcolor">
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/aisle"
+                android:hint="Aisle"
+                android:gravity="top"></EditText>
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/price"
+                android:hint="Price"
+                android:gravity="top"></EditText>
+    </LinearLayout>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_edit_button"
+            android:text="@string/item_edit_confirm"></Button>
+
+</LinearLayout>

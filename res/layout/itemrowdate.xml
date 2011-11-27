@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:maxHeight="30dp"
+              android:orientation="horizontal">
+    <ImageView android:id="@+id/need_icon"
+               android:src="@drawable/checked"
+               android:layout_marginLeft="2dp"
+               android:layout_marginRight="2dp"
+               android:layout_height="30dp"
+               android:layout_marginTop="6dp"
+               android:onClick="needclick"
+               android:layout_width="30dp">
+    </ImageView>
+    <TextView android:text="@+id/tv_quantity"
+              android:layout_height="wrap_content"
+              android:id="@+id/quantity"
+              android:layout_marginLeft="2dp"
+              android:layout_marginRight="2dp"
+              android:maxHeight="30dp"
+              android:clickable="true"
+              android:textSize="20dp"
+              android:layout_marginTop="6px"
+              android:layout_width="50dp"
+              android:layout_weight="2"
+                android:visibility="gone"
+              android:textColor="@color/font">
+    </TextView>
+    <TextView android:text="Need"
+              android:layout_height="wrap_content"
+              android:id="@+id/lblNeed"
+              android:layout_marginLeft="2dp"
+              android:layout_marginRight="2dp"
+              android:maxHeight="30dp"
+              android:textSize="20dp"
+              android:layout_marginTop="6px"
+              android:layout_width="0dp"
+              android:layout_weight="0"
+              android:visible="false"
+              android:textColor="@color/font">
+    </TextView>
+    <TextView android:text="Item"
+              android:layout_height="wrap_content"
+              android:id="@+id/lblItem"
+              android:longClickable="true"
+              android:maxHeight="30dp"
+              android:textSize="20dp"
+              android:layout_marginTop="6px"
+              android:layout_width="200dp"
+              android:layout_weight="1"
+              android:textColor="@color/font">
+    </TextView>
+    <TextView android:text="Date"
+              android:textSize="15dp"
+              android:layout_marginTop="1px"
+              android:clickable="true"
+              android:textColor="@color/font"
+              android:layout_width="100dp"
+              android:id="@+id/lblDate"
+              android:maxHeight="30dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:onClick="dateclick">
+    </TextView>
+    <TextView android:text="Note"
+              android:textSize="15dp"
+              android:layout_marginTop="1px"
+              android:textColor="@color/font"
+              android:layout_width="150dp"
+              android:id="@+id/lblNote"
+              android:maxHeight="30dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:visibility="gone">
+
+    </TextView>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:maxHeight="30dp"
+                  android:orientation="horizontal"
+                  android:visibility="gone">
+        <TextView android:text="Category"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/lblCat"
+                  android:maxHeight="30dp"
+                  android:textSize="20dp"
+                  android:layout_marginTop="6px"
+                  android:layout_width="60dp"
+                  android:layout_weight="1"
+                  android:textColor="@color/font">
+        </TextView>
+        <TextView android:text="TextView"
+                  android:layout_width="wrap_content"
+                  android:textSize="10dp"
+                  android:id="@+id/lblAisle"
+                  android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+    <TextView
+            android:id="@+id/lblNote"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="Notes"
+            android:visibility="gone"
+            android:textSize="8dp"
+            >
+    </TextView>
+    <LinearLayout android:id="@+id/LinearLayout01"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:visibility="gone"
+                  android:background="@color/listcolor">
+        <TextView
+                android:id="@+id/lblDate"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginTop="1dp"
+                android:text="Date"
+                android:textSize="8dp"
+                >
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_priority"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Priority"
+                  android:inputType="numberDecimal">
+        </TextView>
+        <ImageView
+                android:id="@+id/prio_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/star5"
+                android:visibility="gone"
+                >
+        </ImageView>
+
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_coupon"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Coupon"
+                  android:inputType="numberDecimal">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/LinearLayout01"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:visibility="gone"
+                  android:background="@color/listcolor">
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_tax"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Tax"
+                  android:inputType="numberDecimal">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_tax2"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Tax2"
+                  android:inputType="numberDecimal">
+        </TextView>
+        <ToggleButton android:id="@+id/item_autodelete"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textOn="Autodelete on"
+                      android:textOff="Autodelete off"
+                      android:layout_weight="4">
+        </ToggleButton>
+        <ToggleButton android:id="@+id/item_private"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textOn="Private on"
+                      android:textOff="Private off"
+                      android:layout_weight="4">
+        </ToggleButton>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/LinearLayout01"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:visibility="gone"
+                  android:background="@color/listcolor">
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_price"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Price"
+                  android:inputType="numberDecimal">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_aisle"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Aisle"
+                  android:inputType="numberDecimal">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_order"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Order"
+                  android:inputType="numberDecimal">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/LinearLayout01"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:visibility="gone"
+                  android:background="@color/listcolor">
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_alarm"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Alarm"
+                  android:inputType="numberDecimal">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_alarmmidi"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Alarmmidi"
+                  android:inputType="numberDecimal">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_icon"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Icon"
+                  android:inputType="numberDecimal">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_createdate"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Created"
+                  android:inputType="numberDecimal">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/item_modifydate"
+                  android:layout_weight="4"
+                  android:layout_width="wrap_content"
+                  android:hint="Modified"
+                  android:inputType="numberDecimal">
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

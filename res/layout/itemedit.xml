@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scroller" android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:fillViewport="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:background="@color/listcolor">
+        <LinearLayout android:layout_height="wrap_content"
+                      android:id="@+id/linearLayout2"
+                      android:layout_width="fill_parent">
+            <ImageView
+                    android:id="@+id/need_icon"
+                    android:onClick="needclick2"
+                    android:clickable="true"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:src="@drawable/checked"
+                    android:background="@color/listcolor"
+                    >
+            </ImageView>
+            <EditText android:layout_weight="1"
+                      android:gravity="top"
+                      android:layout_width="fill_parent"
+                      android:layout_height="40dp"
+                      android:hint="Item"
+                      android:inputType="textCapSentences|textNoSuggestions|textVisiblePassword"
+                      android:id="@+id/item_edit">
+                <requestFocus>
+                </requestFocus>
+            </EditText>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content"
+                      android:id="@+id/linearLayout1"
+                      android:layout_width="fill_parent">
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/LinearLayout01"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:background="@color/listcolor">
+
+            <LinearLayout android:id="@+id/llQuantity"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:background="@color/listcolor">
+                <TextView android:layout_height="wrap_content"
+                          android:layout_weight="4"
+                          android:textSize="5dp"
+                          android:layout_width="wrap_content"
+                          android:text="Quantity">
+                </TextView>
+
+                <EditText android:layout_height="wrap_content"
+                          android:id="@+id/item_quantity"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:hint="Quantity"
+                          android:inputType="numberDecimal">
+                </EditText>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/llUnit"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:background="@color/listcolor">
+                <TextView android:layout_height="wrap_content"
+                          android:layout_weight="4"
+                          android:textSize="5dp"
+                          android:layout_width="wrap_content"
+                          android:text="Unit">
+                </TextView>
+                <EditText android:layout_height="wrap_content"
+                          android:id="@+id/item_unit"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:hint="Unit"
+                          android:inputType="textNoSuggestions|textVisiblePassword">
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/llCategory"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:background="@color/listcolor">
+                <TextView android:layout_height="wrap_content"
+                          android:layout_weight="4"
+                          android:textSize="5dp"
+                          android:layout_width="wrap_content"
+                          android:text="Category">
+                </TextView>
+                <Spinner android:id="@+id/category"
+                         android:entries="@array/categories"
+                         android:layout_height="wrap_content"
+                         android:layout_width="150dp"
+                         android:layout_weight="2">
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/llNotes"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:background="@color/listcolor">
+            <TextView android:layout_height="wrap_content"
+                      android:layout_weight="4"
+                      android:textSize="5dp"
+                      android:layout_width="wrap_content"
+                      android:text="Notes">
+            </TextView>
+            <EditText android:layout_width="fill_parent"
+                      android:hint="Note"
+                      android:id="@+id/note_edit"
+                      android:gravity="top"
+                      android:layout_height="80dp">
+            </EditText>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/llAlarmLine"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:visibility="visible"
+                      android:background="@color/listcolor">
+            <LinearLayout android:id="@+id/llDate"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:background="@color/listcolor">
+                <TextView android:layout_height="wrap_content"
+                          android:layout_weight="4"
+                          android:textSize="5dp"
+                          android:layout_width="wrap_content"
+                          android:text="Date"/>
+                <Button android:id="@+id/pickDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change the date"/>
+            </LinearLayout>
+            <TextView android:id="@+id/dateDisplay"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text=""/>
+            <ToggleButton android:layout_height="wrap_content"
+                          android:id="@+id/item_alarm"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:textOn="Alarm"
+                          android:textOff="Alarm off"
+                          android:hint="Alarm"
+                          android:inputType="numberDecimal">
+            </ToggleButton>
+            <LinearLayout android:id="@+id/llMidi"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:background="@color/listcolor">
+                <TextView android:layout_height="wrap_content"
+                          android:layout_weight="4"
+                          android:textSize="5dp"
+                          android:layout_width="wrap_content"
+                          android:text="Alarm Sound"/>
+                <EditText android:layout_height="40dp"
+                          android:id="@+id/item_alarmmidi"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:hint="Alarmmidi"
+                          android:inputType="numberDecimal">
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/LinearLayout01"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:visibility="visible"
+                      android:background="@color/listcolor">
+            <LinearLayout android:id="@+id/llPriority"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:background="@color/listcolor">
+                <TextView android:layout_height="wrap_content"
+                          android:layout_weight="4"
+                          android:textSize="5dp"
+                          android:layout_width="wrap_content"
+                          android:text="Priority"/>
+                <EditText android:layout_height="wrap_content"
+                          android:id="@+id/item_priority"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:hint="Priority"
+                          android:inputType="numberDecimal">
+                </EditText>
+            </LinearLayout>
+            <ImageView android:id="@+id/importance_icon"
+                       android:src="@drawable/star5"
+                       android:layout_marginLeft="2dp"
+                       android:layout_marginRight="2dp"
+                       android:layout_height="30dp"
+                       android:layout_marginTop="6dp"
+                       android:visibility="visible"
+                       android:layout_width="30dp">
+            </ImageView>
+
+            <ToggleButton android:layout_height="wrap_content"
+                          android:id="@+id/item_coupon"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:textOn="Coupon"
+                          android:textOff="No coupon"
+                          android:hint="Coupon"
+                          android:inputType="numberDecimal">
+            </ToggleButton>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/LinearLayout01"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:background="@color/listcolor">
+            <ToggleButton android:layout_height="wrap_content"
+                          android:id="@+id/item_tax"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:textOn="Tax"
+                          android:textOff="Tax off"
+                          android:inputType="numberDecimal">
+            </ToggleButton>
+            <ToggleButton android:layout_height="wrap_content"
+                          android:id="@+id/item_tax2"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:textOn="Tax2"
+                          android:textOff="Tax2 off"
+                          android:hint="Tax2"
+                          android:inputType="numberDecimal">
+            </ToggleButton>
+            <ToggleButton android:id="@+id/item_autodelete"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textOn="Auto delete"
+                          android:textOff="Auto del.off"
+                          android:layout_weight="4">
+            </ToggleButton>
+            <ToggleButton android:id="@+id/item_private"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textOn="Private on"
+                          android:textOff="Private off"
+                          android:layout_weight="4">
+            </ToggleButton>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/LinearLayout01"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:visibility="visible"
+                      android:background="@color/listcolor">
+            <LinearLayout android:id="@+id/llPrice"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:background="@color/listcolor">
+                <TextView android:layout_height="wrap_content"
+                          android:layout_weight="4"
+                          android:textSize="5dp"
+                          android:layout_width="wrap_content"
+                          android:text="Price"/>
+                <EditText android:layout_height="wrap_content"
+                          android:id="@+id/item_price"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:hint="Price"
+                          android:inputType="numberDecimal">
+                </EditText>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/llAisle"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:background="@color/listcolor">
+                <TextView android:layout_height="wrap_content"
+                          android:layout_weight="4"
+                          android:textSize="5dp"
+                          android:layout_width="wrap_content"
+                          android:text="Aisle"/>
+                <EditText android:layout_height="wrap_content"
+                          android:id="@+id/item_aisle"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:hint="Aisle"
+                          android:inputType="numberDecimal">
+                </EditText>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/llOrder"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:background="@color/listcolor">
+                <TextView android:layout_height="wrap_content"
+                          android:layout_weight="4"
+                          android:textSize="5dp"
+                          android:layout_width="wrap_content"
+                          android:text="Order"/>
+                <EditText android:layout_height="wrap_content"
+                          android:id="@+id/item_order"
+                          android:layout_weight="4"
+                          android:layout_width="wrap_content"
+                          android:hint="Order"
+                          android:inputType="numberDecimal">
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/LinearLayout01"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:visibility="visible"
+                      android:background="@color/listcolor">
+            <TextView android:layout_height="wrap_content"
+                      android:id="@+id/item_createdate"
+                      android:layout_weight="4"
+                      android:layout_width="wrap_content"
+                      android:hint="Created"
+                      android:inputType="numberDecimal">
+            </TextView>
+            <TextView android:layout_height="wrap_content"
+                      android:id="@+id/item_modifydate"
+                      android:layout_weight="4"
+                      android:layout_width="wrap_content"
+                      android:hint="Modified"
+                      android:inputType="numberDecimal">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/LinearLayout02"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:visibility="visible"
+                      android:background="@color/listcolor">
+            <Button android:text="Edit Aisle/Price"
+                    android:id="@+id/item_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+            </Button>
+            <Button android:id="@+id/cancel_edit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_edit_cancel"
+                    android:layout_gravity="center_vertical">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

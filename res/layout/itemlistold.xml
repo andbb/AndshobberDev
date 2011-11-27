@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_height="wrap_content"
+                  android:maxHeight="10dp"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:background="@color/background_dark">
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/view_app_name"
+                  android:text="@string/app_name"
+                  android:gravity="left"
+                  android:layout_gravity="left"
+                  android:layout_width="0dp"
+                  android:layout_weight="1">
+        </TextView>
+        <TextView android:id="@+id/view_description"
+                  android:layout_height="wrap_content"
+                  android:text="@string/view_txt"
+                  android:enabled="true"
+                  android:gravity="center"
+                  android:layout_width="0dp"
+                  android:layout_weight="1">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:text="@string/database_name"
+                  android:gravity="right"
+                  android:id="@+id/db_name"
+                  android:layout_gravity="right"
+                  android:layout_width="0dp"
+                  android:layout_weight="1">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_height="wrap_content"
+                  android:maxHeight="10dp"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:background="@color/background_dark">
+        <TextView android:layout_height="wrap_content"
+                  android:id="@+id/view_sort1"
+                  android:text="@string/app_name"
+                  android:gravity="left"
+                  android:layout_gravity="left"
+                  android:layout_width="0dp"
+                  android:layout_weight="1">
+        </TextView>
+        <TextView android:id="@+id/view_sort2"
+                  android:layout_height="wrap_content"
+                  android:text="@string/view_txt"
+                  android:enabled="true"
+                  android:gravity="center"
+                  android:layout_width="0dp"
+                  android:layout_weight="1">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:text="@string/database_name"
+                  android:gravity="right"
+                  android:id="@+id/view_sort3"
+                  android:layout_gravity="right"
+                  android:layout_width="0dp"
+                  android:layout_weight="1">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:text="@string/database_name"
+                  android:gravity="right"
+                  android:id="@+id/view_sort4"
+                  android:layout_gravity="right"
+                  android:layout_width="0dp"
+                  android:layout_weight="1">
+        </TextView>
+        <TextView android:layout_height="wrap_content"
+                  android:text="@string/database_name"
+                  android:gravity="right"
+                  android:id="@+id/view_view"
+                  android:layout_gravity="right"
+                  android:layout_width="0dp"
+                  android:layout_weight="1">
+        </TextView>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:maxHeight="50dp"
+                  android:orientation="horizontal">
+        <Spinner android:id="@+id/cat_spinner"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="2"
+                 android:layout_width="150dp"
+                 android:prompt="@string/cat_prompt"/>
+        <Spinner android:id="@+id/store_spinner"
+                 android:layout_width="150dp"
+                 android:layout_height="50dp"
+                 android:prompt="@string/store_prompt"/>
+    </LinearLayout>
+    <EditText android:gravity="top"
+              android:layout_width="fill_parent"
+              android:layout_height="50dp"
+              android:hint="Item to search for"
+              android:visibility="gone"
+              android:inputType="textNoSuggestions"
+              android:id="@+id/search_edit">
+        <requestFocus>
+        </requestFocus>
+    </EditText>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <ListView android:id="@android:id/list"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:fastScrollEnabled="true"
+                android:layout_weight="1.0">
+        </ListView>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+            <TextView android:id="@android:id/empty"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Footer text"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@android:id/empty"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/no_items"/>
+</LinearLayout>

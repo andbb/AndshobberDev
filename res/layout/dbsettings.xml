@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+    <LinearLayout
+            android:id="@+id/Res"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+            <EditText
+                    android:id="@+id/newcat"
+                    android:inputType="textCapSentences"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    >
+            </EditText>
+            <Button
+                    android:id="@+id/addcat"
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:text="Add Category"
+                    >
+            </Button>
+            <Button
+                    android:id="@+id/addstore"
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:text="Add Store"
+                    >
+            </Button>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+            <Button
+                    android:id="@+id/editCats"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:text="Edit categories"
+                    >
+            </Button>
+            <Button
+                    android:id="@+id/editStores"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:text="Edit stores"
+                    >
+            </Button>
+            <Button
+                    android:id="@+id/editCatStores"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Aisle/Store"
+                    >
+            </Button>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+            <Button
+                    android:id="@+id/cleanCat"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="ReBuild Categories"
+                    >
+            </Button>
+            <Button
+                    android:id="@+id/cleanData"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="All stores for all items"
+                    >
+            </Button>
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+            <EditText
+                    android:id="@+id/tax1"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:inputType="numberDecimal"
+                    android:hint="Tax1 in %"
+                    >
+            </EditText>
+
+            <EditText
+                    android:id="@+id/tax2"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:inputType="numberDecimal"
+                    android:hint="Tax2 in %"
+                    >
+            </EditText>
+        </LinearLayout>
+        <Button
+                android:id="@+id/settingsCancel"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/cancel"
+                >
+        </Button>
+    </LinearLayout>
+</ScrollView>

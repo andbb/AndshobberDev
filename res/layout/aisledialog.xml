@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/AisleLinearLayout"
+    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center" android:layout_width="200dip">
+    <TextView android:id="@+id/store_aisle" android:layout_height="wrap_content"
+        android:textColor="#fff" android:textStyle="bold"
+        android:layout_width="wrap_content" android:text=" AndroidPeople.com "></TextView>
+    <TextView android:id="@+id/text_aisle" android:layout_height="wrap_content"
+        android:textColor="#fff" android:layout_width="wrap_content"
+        android:layout_margin="7dip" android:text="Custom Dialog Example By AndroidPeople.com"
+        android:gravity="center"></TextView>
+    <EditText android:layout_height="wrap_content" android:id="@+id/editAisle" android:layout_width="fill_parent" android:inputType="number">
+        <requestFocus></requestFocus>
+    </EditText>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="fill_parent">
+        <Button android:layout_height="wrap_content" android:text="OK" android:id="@+id/OkButton" android:layout_width="wrap_content" android:gravity="left" android:layout_gravity="left"></Button>
+        <Button android:layout_height="wrap_content" android:text="Cancel" android:id="@+id/CancelButton" android:layout_width="wrap_content" android:gravity="right" android:layout_gravity="right"></Button>
+    </LinearLayout>
+</LinearLayout>

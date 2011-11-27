@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scroller" android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:fillViewport="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical" android:layout_width="fill_parent"
+                  android:layout_height="fill_parent" android:background="@color/listcolor">
+        <LinearLayout android:layout_height="wrap_content"
+                      android:id="@+id/linearLayout2" android:layout_width="fill_parent">
+            <EditText android:layout_weight="1" android:gravity="top"
+                      android:layout_width="fill_parent" android:layout_height="60dp"
+                      android:hint="Item" android:id="@+id/item_edit"
+                      android:visibility="gone"></EditText>
+            <Button android:id="@+id/item_edit_button"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/item_edit_confirm" android:layout_gravity="center_vertical"
+                    ></Button>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content"
+                      android:id="@+id/linearLayout1" android:layout_width="fill_parent"></LinearLayout>
+
+        <LinearLayout android:id="@+id/LinearLayout01"
+                      android:layout_height="wrap_content" android:orientation="horizontal"
+                      android:layout_width="fill_parent" android:background="@color/listcolor">
+
+            <EditText android:layout_height="wrap_content" android:id="@+id/item_quantity"
+                      android:layout_weight="4" android:layout_width="wrap_content"
+                      android:hint="Quantity" android:inputType="numberDecimal"
+                      android:visibility="gone">
+            </EditText>
+            <Spinner android:id="@+id/category" android:layout_height="wrap_content"
+                     android:layout_weight="2" android:layout_width="wrap_content"
+                     android:entries="@array/categories"
+                     android:visibility="gone"></Spinner>
+            <Spinner android:id="@+id/item_need" android:layout_height="wrap_content"
+                     android:layout_weight="1" android:layout_width="wrap_content"
+                     android:entries="@array/needs"
+                     android:visibility="gone"></Spinner>
+
+        </LinearLayout>
+        <Button android:text="Edit Aisle/Price" android:id="@+id/item_store"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:visibility="gone"></Button>
+        <EditText android:layout_width="fill_parent" android:hint="Note"
+                  android:id="@+id/note_edit" android:gravity="top"
+                  android:layout_height="80dp" android:visibility="gone">
+            <requestFocus></requestFocus>
+        </EditText>
+        <LinearLayout android:id="@+id/LinearLayout01"
+                      android:layout_height="wrap_content" android:orientation="horizontal"
+                      android:layout_width="fill_parent" android:background="@color/listcolor">
+            <TextView android:text="Date" android:id="@+id/tvDate"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:visibility="gone"></TextView>
+
+            <Button android:id="@+id/pickDate" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Change the date"/>
+            <TextView android:id="@+id/dateDisplay"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text=""/>
+        </LinearLayout>
+        <DatePicker android:id="@+id/datePicker1"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"></DatePicker>
+    </LinearLayout>
+</ScrollView>
