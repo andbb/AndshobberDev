@@ -6,6 +6,7 @@ import android.app.ListActivity;
 import android.content.*;
 import android.database.SQLException;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.InputType;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -36,8 +37,8 @@ public class fileslist extends ListActivity {
     private List<String> itemPath = null;
     private List<String> path = null;
     private String root = "/data/data/dk.andbb.andshobber.database/databases/";
-    private String mydoc = "/sdcard/";
-    private String expDir = mydoc;
+    private String sdcard = "/sdcard/";
+    private String expDir = sdcard;
     public static String dbCp;
     private TextView myPath;
     public String fileName;
@@ -61,13 +62,19 @@ public class fileslist extends ListActivity {
 
 
         mDbHelper = new ShopDbAdapter(this);
+        File sdcardPath = Environment.getExternalStorageDirectory();
+        sdcard = sdcardPath.toString();
+/*
+        File rootPath= getApplicationContext().getFilesDir()
+        root=rootPath.toString();
+*/
 
         setContentView(R.layout.fileslist);
         confirmButton = (Button) findViewById(R.id.file_confirm_button);
         myPath = (TextView) findViewById(R.id.path);
 
 //        root=this.getFilesDir();
-//        getDir(mydoc);
+//        getDir(sdcard);
         getDir(root, fileRegExp);
 
         registerForContextMenu(getListView());
@@ -193,9 +200,9 @@ public class fileslist extends ListActivity {
 
                 fileRegExp = "(?i)hs2_.*\\.xml";
 //                fileRegExp="hs2.*\\.xml";
-                getDir(mydoc, "(?i)hs2_.*\\.xml");
-//                getDir(mydoc, "hs2.*\\.xml");
-//                getDir(mydoc, ".*");
+                getDir(sdcard, "(?i)hs2_.*\\.xml");
+//                getDir(sdcard, "hs2.*\\.xml");
+//                getDir(sdcard, ".*");
 
 //                i = new Intent(this, getText.class);
 //                startActivityForResult(i, mXMLImp);
@@ -203,7 +210,7 @@ public class fileslist extends ListActivity {
                 return true;
             case mExport:
                 fileRegExp = ".*";
-                getDir(mydoc, "/");
+                getDir(sdcard, "/");
                 confirmButton.setVisibility(View.VISIBLE);
 /*
                 fileRequest = item.getItemId();
@@ -255,6 +262,11 @@ public class fileslist extends ListActivity {
                 path.add(f.getName());
             }
 
+        }
+
+        if (files==null) {
+
+            return;
         }
 
         for (File oneFile : files) {
@@ -425,7 +437,7 @@ public class fileslist extends ListActivity {
                     xb = !(value.equals(""));
                     if ((value != null) && !(value.equals(""))) {
                         fileNameIn = value;
-                        //getDir(mydoc);
+                        //getDir(sdcard);
                         switch (mItem) {
                             case mCopy:
                                 fileName = root + value; //TODO: Check for dir
@@ -502,10 +514,10 @@ public class fileslist extends ListActivity {
             break;
             case mExport:
                 try {
-//                    getDir(mydoc);
+//                    getDir(sdcard);
                     String value = data.getStringExtra("value");
                     if (value != null && value.length() > 0) {
-                        //getDir(mydoc);
+                        //getDir(sdcard);
                         fileName = selectFile + "/" + value + ".abb"; //TODO: Check for dir
                         File f = new File(fileName);
                         if (!f.exists()) {

@@ -935,7 +935,7 @@ public class ItemsOverview extends ListActivity {
             hBackground = Color.YELLOW;
             hViewType.setText("Shopping");
         } else {
-            hBackground = Color.CYAN;
+            hBackground = Color.GREEN;
             hViewType.setText("Planning");
         }
 
